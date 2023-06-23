@@ -1,0 +1,81 @@
+<h2>Category Data</h2>
+<div>
+  <input type="text" id="categoryName" [(ngModel)]="categoryName" (keyup.enter)="getCategoryData()">
+  <button (click)="getCategoryData()">Get Data</button>
+</div>
+<table *ngIf="categoryData">
+<tr>
+<th>Month/Year</th><th>Category ID</th>
+    <th>Category Name</th>
+    <th>Inventory ID</th>
+    <th>Inventory Name</th>
+    <th>Price</th>
+    <th>Quantity</th>
+    <th>Seller</th>
+    <th>Description</th>
+    <th>Sold Items</th>
+    <th>Remaining Quantity</th>
+  </tr>
+  <tr *ngFor="let item of categoryData">
+    <td>{{ item.month_year }}</td>
+    <td>{{ item.category_id }}</td>
+    <td>{{ item.category_name }}</td>
+    <td>{{ item.inventory_id }}</td>
+    <td>{{ item.inventory_name }}</td>
+    <td>{{ item.price }}</td>
+    <td>{{ item.quantity }}</td>
+    <td>{{ item.seller }}</td>
+    <td>{{ item.description }}</td>
+    <td>{{ item.sold_items }}</td>
+    <td>{{ item.remaining_quantity }}</td>
+  </tr>
+</table>
+<h2>Category Data</h2>
+
+<div>
+
+  <input type="text" id="categoryName" [(ngModel)]="categoryName" (keyup.enter)="getCategoryData()">
+
+  <button (click)="getCategoryData()">Get Data</button>
+
+</div>
+
+
+
+
+<div class="chart-container">
+
+  <canvas #pieChart></canvas>
+
+</div>
+
+
+
+
+<div class="chart-container">
+
+  <canvas #lineChart></canvas>
+
+</div>
+
+
+
+
+<div class="chart-container">
+
+  <canvas #barChart></canvas>
+
+</div>
+
+
+
+
+<div *ngIf="categoryData.length > 0">
+
+  <h2>Line Chart</h2>
+
+  <div>
+
+    <canvas #lineChart width="400" height="200"></canvas>
+
+  </div>

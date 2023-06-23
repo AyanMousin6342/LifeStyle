@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LifeStyle</title>
+    <link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/carousel/">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+      integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+      integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+      crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+      integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+      crossorigin="anonymous"></script>
+    <style>
+       
+    </style>
+</head>
+<body>
+  <header id="header" class="header fixed-top d-flex align-items-center" style="background-color: black;">
+    <div class="d-flex align-items-center justify-content-between">
+      <label for="check"></label>
+      &nbsp;&nbsp;
+      <div class="logo d-flex align-items-center">
+        <img src="assets/logo.png" alt="">
+        <span style="color: #eab676; font-family: cursive;">LIFESTYLE</span>
+      </div>
+  <div >
+      <nav class="header-nav">
+        <ul>
+          <li>
+            <a class="transparent-button"[routerLink]="['/home']"><i class="bi bi-arrow-bar-left transparent-button" >Back</i></a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    </div>
+  </header>
+      <hr class="featurette-divider">
+
+
+<div class="container px-4 py-5 mx-auto">
+  <div class="card card0">
+      <div class="d-flex flex-lg-row flex-column-reverse">
+          <div class="card card1">
+              <div class="row justify-content-center my-auto">
+                  <div class="col-md-8 col-10 my-5">
+                      <div class="row justify-content-center px-3 mb-3"> <img id="logo" src="assets/logo1.png"> </div>
+                      <!-- <h3 class="mb-5 text-center heading">LifeStyle</h3> -->
+                      <h3 class="msg-info">Please login to your account</h3>
+                      <form [formGroup]="loginform" (ngSubmit)="onLoginSubmit()">                      
+                        <div class="form-group"> 
+                        <label class="form-control-label text-muted" for="Email">Username 
+                          <span class="text-danger">*</span>
+                        </label> 
+                        <input type="email" id="email" placeholder="E-Mail ID" class="form-control" formControlName="email" required>
+                        <div *ngIf="loginform.controls['email'].errors?.['required'] && (loginform.controls['email'].dirty || loginform.controls['email'].touched)" class="error-message">Email is required
+                        </div>
+                        <div *ngIf="loginform.controls['email'].errors?.['email'] && (loginform.controls['email'].dirty || loginform.controls['email'].touched)" class="error-message">Email is invalid
+                        </div>
+                      </div>
+                      <div class="form-group"> 
+                        <label class="form-control-label text-muted" for="Password">Password
+                          <span class="text-danger">*</span>
+                        </label>
+                         <input type="password" id="password" placeholder="Password" class="form-control" formControlName="password"> 
+                         <div *ngIf="loginform.controls['password'].errors?.['required'] && (loginform.controls['password'].dirty || loginform.controls['password'].touched)" class="error-message">Password is required</div>
+                         <div *ngIf="loginform.controls['password'].errors?.['minlength'] || loginform.controls['password'].errors?.['maxlength'] && (loginform.controls['password'].dirty || loginform.controls['password'].touched)" class="error-message">Password is Required</div>
+                        </div>
+                      <div class="row justify-content-center my-3 px-3"> 
+                        <button type="submit" class="btn-block btn-color" [disabled]="loginform.invalid">Login</button> 
+                      </div>
+                      </form>
+                      <div class="bottom text-center mb-5">
+                        <p href="#" class="sm-text mx-auto mb-3">Don't have an account?<button class="btn btn-white ml-2" [routerLink]="['/usersign']" >Sign UP</button></p>
+                    </div>
+                  </div>
+                  
+              </div>
+              
+          </div>
+          <div class="card card2">
+              <div class="my-auto mx-md-5 px-md-5 right">
+                  <h3 class="text-white">Style Your Dream Home....!</h3> <small class="text-white">Lifestyle is your ultimate destination for transforming your living space into a dream home. With our exceptional range of products and services, we bring style, comfort, and functionality to every corner of your living space. Our expert team of designers and craftsmen work diligently to create personalized solutions that reflect your unique taste and cater to your specific needs.</small>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+           <!-- FOOTER -->
+<footer id="footer" class="footer-1">
+  
+  <div class="footer-copyright">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 text-center">
+          <p> @Copyright LifeStyle Pvt.Ltd.2000.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>   
+</body>
+</html>

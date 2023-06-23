@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/carousel/">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <!-- Add your CSS and JavaScript dependencies here -->
+  <style>
+   
+
+   
+  </style>
+</head>
+
+<body>
+  <input type="checkbox" id="check" hidden>
+  <header id="header" class="header fixed-top d-flex align-items-center" style="background-color:black;">
+    <div class="d-flex align-items-center justify-content-between">
+      <label for="check">
+        <i class="bi bi-list toggle-sidebar-btn" style="color: #eab676;"></i>
+      </label>&nbsp;&nbsp;
+      <a href="#" class="logo d-flex align-items-center">
+        <img src="assets/logo.png" alt="">
+        <span style="color: #eab676; font-family: cursive;">LIFESTYLE</span>
+      </a>
+    </div>
+  </header>
+  <aside id="sidebar" class="sidebar" style="background-color:black;">
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <li class="nav-item"><a class="nav-link"><i class="bi bi-house-fill"></i><span>Home</span> </a></li>
+      <li class="nav-item"><a class="nav-link collapsed" [routerLink]="['/userdashboard']"><i class="bi bi-box-fill"></i>
+          <span>Category</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" [routerLink]="['/reports']">
+          <i class="bi bi-flag-fill"></i>
+          <span>Reports</span>
+        </a>
+        <hr>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" [routerLink]="['/feedback']">
+          <i class="bi bi-exclamation-octagon-fill"></i>
+          <span>Send feedback</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" [routerLink]="['/help']">
+          <i class="bi bi-question-circle-fill"></i>
+          <span>Help</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" [routerLink]="['/userlogin']">
+          <i class="bi bi-box-arrow-in-left"></i>
+          <span>logout</span>
+        </a>
+      </li>
+    </ul>
+  </aside>
+  <main id="main" class="main">
+    <section class="section dashboard">
+      <div class="row" id="abcd">
+        <div id="feedbackSection" >
+
+          <h2>Enter Your Feedback</h2>
+        
+        
+        
+        
+          <form (submit)="submitFeedback()" class="feedback-form">
+        
+            <label>Email:</label>
+        
+            <input type="email" [(ngModel)]="feedback.email" name="email" required>
+        
+        
+        
+        
+            <label>Feedback:</label>
+        
+            <textarea [(ngModel)]="feedback.feedback" name="feedback" required></textarea>
+        
+        
+        
+        
+            <button type="submit">Submit</button>
+        
+          </form>
+        
+        </div>
+
+      </div>
+    </section>
+   </main>
+        
+   <footer id="footer" class="footer-1">
+  
+    <div class="footer-copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p> @Copyright LifeStyle Pvt.Ltd.2000.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer> 
+</body>
+</html>

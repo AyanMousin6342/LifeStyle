@@ -1,0 +1,53 @@
+<h1>Update Student Details</h1>
+<div>
+  <form [formGroup]="myForm" (ngSubmit)="submitForm()" class="custom-form">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label class="form-label">Category_ID</label>
+          <input type="text" class="form-control" formControlName="idnameFormControl" placeholder="category_id">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Category_name</label>
+          <input type="text" class="form-control" formControlName="cnameFormControl" placeholder="category_Name">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Inventory_name</label>
+          <input type="text" class="form-control" formControlName="inameFormControl" placeholder="Inventory_name">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Price</label>
+          <input type="number" class="form-control" formControlName="price" placeholder="Price">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Quantity</label>
+          <input type="number" class="form-control" formControlName="quality" placeholder="Quantity">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Seller</label>
+          <input type="text" class="form-control" formControlName="Seller" placeholder="Seller">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="mb-3">
+          <label class="form-label">Description</label>
+          <input type="text" class="form-control" formControlName="dFormControl" placeholder="Description">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Sold_items</label>
+          <input type="number" class="form-control" formControlName="sFormControl" placeholder="Sold_items">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Sold_date</label>
+          <input type="date" class="form-control" formControlName="sdFormControl" placeholder="Sold_date">
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-end p-0">
+      <div class="col-4 form-btn-group p-0">
+        <button type="button" class="btn btn-secondary" (click)="closeDialogBox($event)">CANCEL</button>
+        <button type="submit" class="btn btn-primary">SUBMIT</button>
+      </div>
+    </div>
+  </form>
+</div>

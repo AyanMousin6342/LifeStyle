@@ -1,0 +1,32 @@
+<div class="col-md-4" *ngIf="inven && inven.length > 0">
+    <div class="price-card">
+      <h2>{{ inven[0]?.inventory_name }}</h2>
+      <p>{{ inven[0]?.category_id }} {{ inven[0]?.category_name }}</p>
+      <p class="price"><span>{{ inven[0]?.price }}</span></p>
+      <ul class="pricing-offers">
+        <li>Seller: {{ inven[0]?.seller }}</li>
+        <li>Quantity: {{ inven[0]?.quantity }}</li>
+        <li>Description: {{ inven[0]?.description }}</li>
+        <li>Sold items: {{ inven[0]?.sold_items }}</li>
+        <li>Sold date: {{ inven[0]?.sold_date }}</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="col-md-4" *ngIf="inven && inven.length > 0">
+  <div class="price-card" *ngFor="let inventory of inven">
+    <h2>{{ inventory?.inventory_name }}</h2>
+    <p>{{ inventory?.category_id }} {{ inventory?.category_name }}</p>
+    <p class="price"><span>{{ inventory?.price }}</span></p>
+    <ul class="pricing-offers">
+      <li>Seller: {{ inventory?.seller }}</li>
+      <li>Quantity: {{ inventory?.quantity }}</li>
+      <li>Description: {{ inventory?.description }}</li>
+      <li>Sold items: {{ inventory?.sold_items }}</li>
+      <li>Sold date: {{ inventory?.sold_date }}</li>
+    </ul>
+  </div>
+</div>
+
+  
+  

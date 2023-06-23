@@ -1,0 +1,50 @@
+<form class="example-form" style="padding: 20px 30px;" [formGroup]="myForm" (ngSubmit)="submitForm()">
+  <h1 class="text-center">Add Inventory</h1>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="mb-3">
+          <label class="form-label">category_ID</label>
+          <input type="text" class="form-control" [formControl]="idnameFormControl" placeholder="category_id">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">inventory_name</label>
+          <input type="text" class="form-control" [formControl]="inameFormControl" placeholder="inventory_name">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Quantity</label>
+          <input type="number" class="form-control" [formControl]="quality" placeholder="Quantity">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Description</label>
+          <input type="text" class="form-control" [formControl]="dFormControl" placeholder="Description">
+        </div>
+      </div>
+      <div class="col">
+        <div class="mb-3">
+          <label class="form-label">category_Name</label>
+          <input type="text" class="form-control" [formControl]="cnameFormControl" placeholder="category_Name">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Price</label>
+          <input type="number" class="form-control" [formControl]="price" placeholder="Price">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">seller</label>
+          <input type="text" class="form-control" [formControl]="Seller" placeholder="seller">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">sold_items</label>
+          <input type="number" class="form-control" [formControl]="sFormControl" placeholder="No. of sold_items">
+        </div>
+      </div>
+    </div>
+    <div class="mb-3">
+      <label class="form-label">sold_date</label>
+      <input type="date" class="form-control" [formControl]="sdFormControl" placeholder="Date">
+    </div>
+    <div class="d-grid gap-2">
+      <button class="btn btn-primary" type="submit">Save Category</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,13 @@
+.custom-form {
+    padding: 20px;
+  }
+
+  .form-label {
+    font-weight: bold;
+  }
+
+  .form-btn-group {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard</title>
+  <link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/carousel/">
+  <!-- Bootstrap core CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+    integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+    integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <!-- Add your CSS and JavaScript dependencies here -->
+  <style>
+   
+
+   
+  </style>
+</head>
+
+<body>
+  <input type="checkbox" id="check" hidden>
+  <header id="header" class="header fixed-top d-flex align-items-center" style="background-color:black;">
+    <div class="d-flex align-items-center justify-content-between">
+      <label for="check">
+        <i class="bi bi-list toggle-sidebar-btn" style="color: #eab676;"></i>
+      </label>&nbsp;&nbsp;
+      <a href="#" class="logo d-flex align-items-center">
+        <img src="assets/logo.png" alt="">
+        <span style="color: #eab676; font-family: cursive;">LIFESTYLE</span>
+      </a>
+    </div>
+  </header>
+  <aside id="sidebar" class="sidebar" style="background-color:black;">
+    <ul class="sidebar-nav" id="sidebar-nav">
+      <li class="nav-item"><a class="nav-link"><i class="bi bi-house-fill"></i><span>Home</span> </a></li>
+      <li class="nav-item"><a class="nav-link collapsed" [routerLink]="['/userdashboard']"><i class="bi bi-box-fill"></i>
+          <span>Category</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" [routerLink]="['/reports']">
+          <i class="bi bi-flag-fill"></i>
+          <span>Reports</span>
+        </a>
+        <hr>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" [routerLink]="['/feedback']">
+          <i class="bi bi-exclamation-octagon-fill"></i>
+          <span>Send feedback</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" [routerLink]="['/help']">
+          <i class="bi bi-question-circle-fill"></i>
+          <span>Help</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link collapsed" [routerLink]="['/userlogin']">
+          <i class="bi bi-box-arrow-in-left"></i>
+          <span>logout</span>
+        </a>
+      </li>
+    </ul>
+  </aside>
+  <main id="main" class="main">
+    <section class="section dashboard">
+      <div class="row" id="abcd">
+        <div id="helpSection">
+
+          <h1>Help</h1>
+        
+        
+        
+        
+          <div class="section">
+        
+            <h2>Welcome to our Inventory Management System!</h2>
+        
+            <p>This system allows you to efficiently manage your inventory and streamline your operations. Below, you'll find useful information and resources to help you make the most of the system.</p>
+        
+          </div>
+        
+        
+        
+        
+          <div class="section">
+        
+            <h1>Frequently Asked Questions (FAQs)</h1>
+        
+            <p><strong>Q: How do I update item quantities?</strong><br>A: To update item quantities, navigate to the "Inventory" section and click on the item you want to update. Then, modify the quantity and click "Save" to apply the changes.</p>
+        
+            <p><strong>Q: How can I generate inventory reports?</strong><br>A: Generating inventory reports is easy! Simply go to the "Reports" section and select the type of report you want to generate, such as "Inventory Summary" or "Sales Report."</p>
+        
+          </div>
+        
+        
+        
+        
+          <div class="section">
+        
+            <h3>Troubleshooting and Error Messages</h3>
+        
+            <p><strong>Error: Invalid login credentials.</strong><br>If you receive this error, please double-check your login credentials and ensure that you are using the correct username and password combination.</p>
+        
+            <p>If you encounter any other issues or have questions that are not addressed here, please contact our support team at support@inventorysystem.com or call (123) 456-7890.</p>
+        
+          </div>
+        
+        
+        
+        
+          <div class="section">
+        
+            <h3>Glossary of Terms</h3>
+        
+            <p><strong>Inventory:</strong> The complete list of items and their quantities that your business holds in stock.</p>
+        
+            <p><strong>Reorder Point:</strong> The inventory level at which you should reorder items to ensure you don't run out of stock.</p>
+        
+          </div>
+        
+        
+        
+        
+          <div class="section">
+        
+            <h3>Tips and Best Practices</h3>
+        
+            <p><strong>Categorize your inventory items into logical groups or use labels to easily identify and locate items.</strong></p>
+        
+            <p><strong>Regular Audits:</strong> Conduct periodic inventory audits to ensure accuracy and identify any discrepancies.</p>
+        
+          </div>
+        
+        
+        
+        
+          <div class="section">
+        
+            <h1>Contact Information</h1>
+        
+            <p>For any further assistance or support, please don't hesitate to reach out to our team:</p>
+        
+            <p>Email: lifestylesupport@gmail.com<br>Phone: (123) 456-7890</p>
+        
+          </div>
+        
+        </div>
+
+      </div>
+    </section>
+   </main>
+        
+   <footer id="footer" class="footer-1">
+  
+    <div class="footer-copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12 text-center">
+            <p> @Copyright LifeStyle Pvt.Ltd.2000.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer> 
+</body>
+
+</html>
+
+
